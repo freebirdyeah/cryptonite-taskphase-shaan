@@ -6,7 +6,7 @@ Module Description: Covers the basics of command line on how to execute commands
 
 > Challenge Statement: In this level, invoke the hello command to get the flag! Keep in mind: commands in Linux are case sensitive: hello is different from HELLO.
 
-Simply invoke the `hello` command to get the flag `pwn.college{cFfM4RO8xoeCObkugP-g0XtU6Vp.ddjNyUDL4kjN0czW}`
+Simply invoke the `hello` command to get the flag `pwn.college{UfAWZjq_noMvGG0m_mYZyqZdIAl.ddjNyUDL2MDO0czW}`
 
 ## Intro to Arguments
 
@@ -14,4 +14,4 @@ Simply invoke the `hello` command to get the flag `pwn.college{cFfM4RO8xoeCObkug
 
 Arguments seem to follow commands and tell the command what to do. 
 
-Here, simply invoke the `hello` command with the argument `hackers`; `$ hello hackers` to obtain the flag `pwn.college{8Cue8xogWMbqs51WJYOdZmMDtuO.dhjNyUDL4kjN0czW}`
+Here, simply invoke the `hello` command with the argument `hackers` like: `$ hello hackers` to obtain the flag `pwn.college{kIuJJRI3mApKGuaSlis-JnQ63jG.dhjNyUDL2MDO0czW}`
