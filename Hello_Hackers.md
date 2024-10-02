@@ -12,4 +12,6 @@ Simply invoke the `hello` command to get the flag `pwn.college{cFfM4RO8xoeCObkug
 
 > Challenge Statement: In this challenge, to get the flag, you must run the hello command with a single argument of hackers. Try it now!
 
-Arguments seem to follow commands and tell the command what to do. Here, simply invoke the `hello` command with the argument `hackers`: `hello hackers` to obtain the flag `pwn.college{8Cue8xogWMbqs51WJYOdZmMDtuO.dhjNyUDL4kjN0czW}`
+Arguments seem to follow commands and tell the command what to do. 
+
+Here, simply invoke the `hello` command with the argument `hackers`; `$ hello hackers` to obtain the flag `pwn.college{8Cue8xogWMbqs51WJYOdZmMDtuO.dhjNyUDL4kjN0czW}`
