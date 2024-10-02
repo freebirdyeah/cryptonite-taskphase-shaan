@@ -5,9 +5,9 @@ _Module Description: To know the basics of linux filepaths and how to navigate t
 
 ## The Root
 
-> Challenge Statement: In this level, we've added a program right in /, called pwn, that will give you the flag. All you need to do for this level is to invoke this program! 
+> Challenge Statement: In this level, we've added a program right in `/`, called `pwn`, that will give you the flag. All you need to do for this level is to invoke this program! 
 
-> You can invoke a program by providing its path on the command line. In this case, you'll be giving the exact path, starting from /, so the path would be /pwn. This style of path, one that starts with the root directory, is referred to as an "absolute path". 
+> You can invoke a program by providing its path on the command line. In this case, you'll be giving the exact path, starting from `/`, so the path would be `/pwn`. This style of path, one that starts with the root directory, is referred to as an "absolute path". 
 
 > Start the challenge, launch a terminal, invoke the pwn program using its absolute path, and Capture that Flag! Good luck!
 
@@ -19,9 +19,9 @@ Flag: `pwn.college{gtXwtCKvE5AJA4Rt7QdBhWCP7Jj.dhzN5QDL2MDO0czW}`
 
 ## Program and absolute paths
 
-> Challenge Statement: Except for in the previous level, challenges in pwn.college are in the challenge directory and the challenge directory is, in turn, right in the root directory (/). The path to the challenge the directory is, thus, /challenge. The name of the challenge program in this level is run, and it lives in the /challenge directory. Thus, the path to the run challenge program is /challenge/run.
+> Challenge Statement: Except for in the previous level, challenges in pwn.college are in the challenge directory and the challenge directory is, in turn, right in the root directory (/). The path to the challenge the directory is, thus, `/challenge`. The name of the challenge program in this level is run, and it lives in the `/challenge` directory. Thus, the path to the run challenge program is `/challenge/run`.
 
-> This challenge again requires you to execute it by invoking its absolute path. You'll want to execute the run file that is in the challenge directory that is, in turn, in the / directory. If you invoke the challenge correctly, it will give you the flag. Good luck!
+> This challenge again requires you to execute it by invoking its absolute path. You'll want to execute the run file that is in the challenge directory that is, in turn, in the `/` directory. If you invoke the challenge correctly, it will give you the flag. Good luck!
 
 This time the `run` file is in the `challenge` directory which is in the `/` root directory. To execute the `run` file regardless of the present working directory, we need to invoke it using it's absolute path which will be `/challenge/run`
 
@@ -34,6 +34,7 @@ Flag: `pwn.college{44cULa5PkZeUip8FGjQtGBV-HWJ.dVDN1QDL2MDO0czW}`
 > Challenge Statement: You can navigate around directories by using the cd (change directory) command and passing a path to it as an argument, as so:
 
 > `hacker@dojo:~$ cd /some/new/directory`
+>
 > `hacker@dojo:/some/new/directory$ cd /some/new/directory`
 
 > This affects the "current working directory" of your process (in this case, the bash shell). Each process has a directory in which it's currently hanging out. The reasons for this will become clear later in the module.
@@ -84,7 +85,7 @@ Flag: `pwn.college{Y5WM1tKbhnihWn1Cpb9ZhADi_4o.dhDN1QDL2MDO0czW}`
 
 ## Implicit relative paths, from /
 
-> Challenge Statement: You'll need to run /challenge/run using a relative path while having a current working directory of /. For this level, I'll give you a hint. Your relative path starts with the letter 'c'
+> Challenge Statement: You'll need to run /challenge/run using a relative path while having a current working directory of `/`. For this level, I'll give you a hint. Your relative path starts with the letter 'c'
 
 As the challenge description says, we need to run `/challenge/run` using a relative path while `/` is our cwd.
 
@@ -104,16 +105,23 @@ Flag: `pwn.college{YnX2FRVz8pZLV6ETY8HH16bbP86.dlDN1QDL2MDO0czW}`
 > In most operating systems, including Linux, every directory has two implicit entries that you can reference in paths: . and ... The first, ., refers right to the same directory, so the following absolute paths are all identical to each other:
 
 > `/challenge`
+>
 > `/challenge/.`
+>
 > `/challenge/./././././././././`
+> 
 > `/./././challenge/././`
 >
 > The following relative paths are also all identical to each other:
 
 > `challenge`
+> 
 > `./challenge`
+> 
 > `./././challenge`
+> 
 > `challenge/.`
+>
 > Of course, if your current working directory is /, the above relative paths are equivalent to the above absolute paths.
 
 > This challenge will get you using . in your relative paths. Get ready!
@@ -134,11 +142,13 @@ Flag: `pwn.college{wLTb8AqVbdv-TwdLyrlj9oESQQf.dBTN1QDL2MDO0czW}`
 > Linux explicitly avoids automatically looking in the current directory when you provide a "naked" path. Consider the following:
 
 > `hacker@dojo:~$ cd /challenge`
+>
 > `hacker@dojo:/challenge$ run`
 
 > This will not invoke /challenge/run. This is actually a safety measure: if Linux searched the current directory for programs every time you entered a naked path, you could accidentally execute programs in your current directory that happened to have the same names as core system utilities! As a result, the above commands will yield the following error:
 
 > `bash: run: command not found`
+> 
 > We'll explore the mechanisms behind this concept later, but in this challenge, will learn how to explicitly use relative paths to launch run in this scenario. The way to do this is to tell Linux that you explicitly want to execute a program in the current directory, using . like in the previous levels. Give it a try now!
 
 Challenge statement says that if we `cd` into `/challenge` directory we can't execute `/challenge/run` file just by `$ run`, we will need to `$ ./run` to execute that file. This is a safety measure to prevent those programs from executing which have the same name as core system utilities.
