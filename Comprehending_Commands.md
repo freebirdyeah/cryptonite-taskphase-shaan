@@ -152,7 +152,7 @@ It is: pwn.college{kT9KU8X_39lUM_wYmYRNCuv9XWo.dljM4QDL2MDO0czW}
 ```
 
 
-# Making directories
+## Making directories
 
 The challenge statement instructs us to make a directory `/tmp/pwn` and make a file `college` in it to obtain the flag from `/challenge/run`
 
@@ -166,7 +166,7 @@ This can be simply done by:-
 
 flag: `pwn.college{YEXXcqC7XaRvUlTNcfriXFkR2tF.dFzM4QDL2MDO0czW}`
 
-# Finding files
+## Finding files
 
 > NOTE: The `find` command searches for every file in the specified directory if a search criteria isn't specified, if the directory isn't specified as well then current working directory is taken
 
@@ -224,8 +224,8 @@ About to read out the /home/hacker/not-the-flag file!
 pwn.college{Q4imH6UhpRybDxpEywk5Mk3vHMS.dlTM1UDL2MDO0czW}
 ```
 
-> NOTE: On noticing, `not-the-flag` doesn't exists, I entered `~$ touch not-the-flag` and then executed `~$ ln -s /flag not-the-flag` which gave the error: `ln: failed to create symbolic link 'not-the-flag': File exists` which happened because the file `not-the-flag` already existed and `ln` can't overwrite existing file or symlinks. In short, if you're creating a symlink, the file that you want to link shouldn't exist beforehand.
+> NOTE: On noticing, `not-the-flag` doesn't exists, I entered `~$ touch not-the-flag` and then executed `~$ ln -s /flag not-the-flag` which gave the error: `ln: failed to create symbolic link 'not-the-flag': File exists` which happened because the file `not-the-flag` already existed and `ln` can't overwrite existing file or symlinks. In short it seems to me, if you're creating a symlink, the file that you want to link shouldn't exist beforehand.
 
 > This Problem was resolved when `~$ ln -s -f /flag not-the-flag` was executed as the `-f` instructs `ln` to overwrite.
 
-> NOTE 2: /flag was unreadable, however it contents could be accessed just by making a symlink to it. This seems to be some kind of a security flaw.
+> NOTE 2: `/flag` was unreadable, however it contents could be accessed just by making a symlink to it. This seems to be some kind of a security flaw.
