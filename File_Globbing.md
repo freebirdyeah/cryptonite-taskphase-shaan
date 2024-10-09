@@ -74,7 +74,7 @@ flag: `pwn.college{ICAmHDmI0M2bPjKfydPFAjx6CNp.dVjM4QDL2MDO0czW}`
 
 ## Exclusionary globbing
 
-similar to the previous challenge, except for exclusionary globbing, challenge statement directs us to find files not starting with 'p', 'w' or 'n'. The challenge can be done by:-
+similar to the previous challenge, except for exclusionary globbing, challenge statement directs us to find an argument which finds files not starting with 'p', 'w' or 'n' and enter that argument for `/challenge/run` to get the flag. The challenge can be done by:-
 
 ```
 ~$ cd /challenge/files
