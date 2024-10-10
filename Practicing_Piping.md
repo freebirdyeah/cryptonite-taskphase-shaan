@@ -199,6 +199,14 @@ The challenge instructs us to write the contents of `/challenge/hack` file putti
 ~$ /challenge/hack 2> >(/challenge/the) | /challenge/planet
 ```
 
+and we will get:-
+
+```
+Congratulations, you have learned a redirection technique that even experts
+struggle with! Here is your flag:
+pwn.college{s1qU2skS1XxXjj3UpuZwq6SQm91.dFDNwYDL2MDO0czW}
+```
+
 > NOTE: Initally I came up with: `/challenge/hack 2> /challenge/the | /challenge/planet` which wasn't working since I was trying to write stderr to `/challenge/the` instead of putting stderr into it's input using Process substitution
 
 > NOTE 2: `|` using a pipe ONLY directs stdout. If stderr needs to be piped as well then `2>&1` or `2>` need to be used
