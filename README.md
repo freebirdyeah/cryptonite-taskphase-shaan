@@ -1,2 +1,2 @@
-# 💎 Cryptonite: Task Phase 💎
-for Cryptonite task-phase
+# 💎 Cryptonite: Junior Task Phase 💎
+For Cryptonite JTP tasks
