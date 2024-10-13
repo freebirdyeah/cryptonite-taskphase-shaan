@@ -1,6 +1,6 @@
 # Shell Variables
 
-Module Description: To leaarn about usage of variables in shell commands and scripts.
+Module Description: To learn about usage of variables in shell commands and scripts.
 
 
 ## Printing Variables
