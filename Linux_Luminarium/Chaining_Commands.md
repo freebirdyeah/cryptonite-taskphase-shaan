@@ -35,7 +35,7 @@ This challenge instructs us to create a script that calls the `/challenge/pwn` c
 We can use our old `x.sh` file:-
 
 ```
-~$ bash x.sh > /challenge/solve
+~$ bash x.sh | /challenge/solve
 ```
 
 flag: `pwn.college{UcYvOsYeywbwZ2he-wEQD5-1792.dhTM5QDL2MDO0czW}`
